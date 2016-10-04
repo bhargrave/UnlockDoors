@@ -13,7 +13,7 @@
        * that the left door is opened.
       **/
       function openLeftDoor() {
-        document.getElementById("leftDoorStatus").innerHTML = "Open";
+        document.getElementById("leftDoorStatus").innerHTML = "Left door opened";
         document.getElementById("rightDoor").removeAttribute("disabled");
       }
       /**
@@ -22,7 +22,10 @@
        * that the right door is opened.
       **/
       // Add function here for opening RIGHT door...
-
+      function openRightDoor() {
+        document.getElementById("rightDoorStatus").innerHTML = "Right door opened";
+        document.getElementById("resetDoors").removeAttribute("disabled");
+      }
 
       /**
        * This function should disable both the right door button and the reset
@@ -30,7 +33,11 @@
        * doors so they don't say they're open.
       **/
       function reset(){
-        document.getElementById("rightDoor").setAttribute("disabled", "");
+        document.getElementById("leftDoorStatus").innerHTML = "";
+        document.getElementById("rightDoorStatus").innerHTML = "";
+document.getElementById("rightDoor").setAttribute("disabled", "");
+
+        window.alert("Everything reset!");
       }
     </script>
   </head>
